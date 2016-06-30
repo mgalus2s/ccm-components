@@ -1,0 +1,90 @@
+.ccm-userstories {
+  font-family: arial;
+}
+
+.ccm-userstories > .main-content {
+  width: 392px;
+}
+
+.ccm-userstories > .main-content > .story_entries > .stories {
+  display: table;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  background: gray;
+  border: 1px solid black;
+  width: 360px;
+}
+.ccm-userstories > .main-content > .story_entries > .stories > div {
+  display: table-row;
+}
+.ccm-userstories > .main-content > div > div {
+  display: table-cell;
+
+}
+.ccm-userstories > .main-content > .story_entries > .stories > .name:after {
+  content: ':';
+  padding-right: 0.5em;
+}
+
+.ccm-userstories > .add_story {
+	display: table;
+}
+
+.ccm-userstories > .main-content > .add_story > .new_story {
+  background: lightgrey;
+}
+
+.ccm-userstories > .main-content > .add_story > .new_story > form > .story_text {
+  margin: 0.5em;
+}
+
+.ccm-userstories > .main-content > .add_story > .new_story > form > .selections {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.ccm-userstories > .main-content > .add_story > .new_story > form .selection {
+  width: 80px;
+  margin-right: 1em;
+}
+
+.ccm-userstories > .main-content > .add_story > .new_story > form .selection_right {
+  width: 80px;
+}
+
+.ccm-userstories > .main-content > .add_story > .new_story > form .felder {
+  float: left;
+} 
+
+.ccm-userstories > .main-content > .add_story > .new_story > form > .input_button_div {
+  text-align: center;
+}
+
+.ccm-userstories > .main-content > .add_story > .new_story > form .input_button {
+  margin: 0.5em;
+  margin-top: 1em;
+  clear: both;
+}
+
+.ccm-userstories > .main-content > .sort_story {
+  background: lightgrey;
+  margin-top: 0.5em;
+}
+
+.ccm-userstories > .main-content > .sort_story > .sort_div .button {
+  margin-left: 1em;
+  width: 86px;
+}
+
+.ccm-userstories > .main-content > .sort_story > .sort_div > .sort_navi {
+  margin: 0.5em;
+}
+
+.ccm-userstories > .main-content > .sort_story > .sort_div > .search_navi {
+  margin: 0.5em;
+}
+
+.ccm-userstories > .main-content > .sort_story > .sort_div > .search_navi > .search_input {
+  margin-left: 1em;
+  width: 80px;
+}
