@@ -1,14 +1,14 @@
 ccm.component( {
 	name: 'userstories',
-	config: {                    // Standardkonfiguration für ccm-Instanzen
-		html:  [ ccm.store, { local: 'https://github.com/mgalus2s/ccm-components/blob/master/phase-4/templates.json' } ],  // Einbindung der HTML-Templates
-		key: 'userstorybuilder',  // Standardwert für den Schlüssel des zu visualisierenden Datensatzes
-		store: [ ccm.store, { local: 'https://github.com/mgalus2s/ccm-components/blob/master/phase-4/dataset.json' } ],       // Abhängigkeit zum ccm-Datenspeicher
-		style: [ ccm.load, 'https://github.com/mgalus2s/ccm-components/blob/master/phase-4/style.css' ],  // Einbindung einer CSS-Datei
+	config: {                    // Standardkonfiguration fÃ¼r ccm-Instanzen
+		html:  [ ccm.store, { local: 'https://raw.githubusercontent.com/mgalus2s/ccm-components/master/phase-4/templates.json' } ],  // Einbindung der HTML-Templates
+		key: 'userstorybuilder',  // Standardwert fÃ¼r den SchlÃ¼ssel des zu visualisierenden Datensatzes
+		store: [ ccm.store, { local: 'https://raw.githubusercontent.com/mgalus2s/ccm-components/master/phase-4/dataset.json' } ],       // AbhÃ¤ngigkeit zum ccm-Datenspeicher
+		style: [ ccm.load, 'https://raw.githubusercontent.com/mgalus2s/ccm-components/master/phase-4/style.css' ],  // Einbindung einer CSS-Datei
 		user: [ ccm.instance, 'https://kaul.inf.h-brs.de/ccm/components/user2.js' ]
 	},
 	Instance: function () {
-		var self = this;  // Hilfsvariable für einheitlichen Zugriff auf die ccm-Instanz
+		var self = this;  // Hilfsvariable fÃ¼r einheitlichen Zugriff auf die ccm-Instanz
 		self.init = function ( callback ) {
 			self.store.onChange = function () { self.render(); };
 			callback();
@@ -43,7 +43,7 @@ ccm.component( {
 					}
 
 
-					new_story_div.append( ccm.helper.html( self.html.get( 'input' ), {  // Anhängen des
+					new_story_div.append( ccm.helper.html( self.html.get( 'input' ), {  // AnhÃ¤ngen des
 						onsubmit: function () {						// input-Templates
 							var story = ccm.helper.val( ccm.helper.find( self, 'textarea' ).val().trim() );
 							var value = ccm.helper.val( ccm.helper.find( self, '.selection_value' ).val().trim() );
