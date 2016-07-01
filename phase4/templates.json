@@ -5,11 +5,24 @@ ccm.callback["templates.json"]({
     "inner": [
       {
         "tag":"div",
+        "class":"titel",
+        "inner":"<h2>Userstory Builder</h2>"
+      },
+      {
+        "tag":"div",
         "class":"add_story"
       },
       {
         "tag":"div",
-        "class":"sort_story"
+        "class":"del_story"
+      },
+      {
+        "tag":"div",
+        "class":"sort_story",
+        "inner": {
+          "tag": "div",
+          "class": "sort_div" 
+        }
       },
       {
         "tag":"div",
@@ -18,104 +31,77 @@ ccm.callback["templates.json"]({
     ]
   },
 
-  "sort": {
-    "tag": "div",
-    "class": "sort_div", 
-    "inner": [ 
-      {
-        "tag":"div",
-        "class":"sort_navi",
-        "inner": [
-          {
-            "inner": "Nach:"
-          },
-          {
-            "tag": "select",
-            "class":"sort_selection selection",
-            "inner": [
-              {
-                "tag":"option",
-                "value":"value",
-                "inner": "Mehrwert"
-              },
-              {
-                "tag":"option",
-                "value":"punish",
-                "inner": "Strafe"
-              },
-              {
-                "tag":"option",
-                "value":"risk",
-                "inner": "Risiko"
-              },
-              {
-                "tag":"option",
-                "value":"effort",
-                "inner": "Aufwand"
-              },
-              {
-                "tag":"option",
-                "value":"prio",
-                "inner": "Priorität"
-              }
-            ]
-          },
-          {
-            "tag": "input",
-            "class":"sort_button button",
-            "type": "submit",
-            "value": "Sortieren"
-          }
-        ]
-      },
-      {
-        "tag":"div",
-        "class":"search_navi",
-        "inner": [
-          {
-            "tag": "select",
-            "class":"search_selection selection",
-            "inner": [
-              {
-                "tag":"option",
-                "value":"value",
-                "inner": "Mehrwert"
-              },
-              {
-                "tag":"option",
-                "value":"punish",
-                "inner": "Strafe"
-              },
-              {
-                "tag":"option",
-                "value":"risk",
-                "inner": "Risiko"
-              },
-              {
-                "tag":"option",
-                "value":"effort",
-                "inner": "Aufwand"
-              },
-              {
-                "tag":"option",
-                "value":"prio",
-                "inner": "Priorität"
-              }
-            ]
-          },
-          {
-            "tag":"input",
-            "class":"search_input"
-          },
-          {
-            "tag": "input",
-            "class":"search_button button",
-            "type": "submit",
-            "value": "Suchen"
-          }
-        ]
-      }
-    ]
+  "del_navi": {
+    "tag":"div",
+    "class":"del_navi", 
+    "inner": {
+      "tag":"form",
+      "inner": [
+        {
+          "tag":"input",
+          "class":"del_input",
+          "placeholder":"ID"
+        },
+        {
+          "tag": "input",
+          "class":"del_button button",
+          "type": "submit",
+          "value": "Löschen"
+        }
+      ],
+      "onsubmit": "%onsubmit%"
+    }
+  },
+
+  "sort_navi": {
+    "tag":"div",
+    "class":"sort_navi",
+    "inner": {
+      "tag": "form",
+      "inner": [
+        {
+          "inner": "Nach:"
+        },
+        {
+          "tag": "select",
+          "class":"sort_selection selection",
+          "inner": [
+            {
+              "tag":"option",
+              "value":"value",
+              "inner": "Mehrwert"
+            },
+            {
+              "tag":"option",
+              "value":"punish",
+              "inner": "Strafe"
+            },
+            {
+              "tag":"option",
+              "value":"risk",
+              "inner": "Risiko"
+            },
+            {
+              "tag":"option",
+              "value":"effort",
+              "inner": "Aufwand"
+            },
+            {
+              "tag":"option",
+              "value":"prio",
+              "inner": "Priorität"
+            }
+          ]
+        },
+        {
+          "tag": "input",
+          "class":"sort_button button",
+          "type": "submit",
+          "value": "Sortieren"
+        }
+      ],
+      "onsubmit": "%onsubmit%"
+    }
   },
 
   "input": {
@@ -358,33 +344,18 @@ ccm.callback["templates.json"]({
     "inner": [
       {
         "tag": "div",
-        "class": "name",
-        "inner": "%name%"
+        "class": "story_information",
+        "inner": "[<b>%name%</b>] ID: %id% <hr>"
       },
       {
         "tag": "div",
         "class": "text",
-        "inner": "%story%"
+        "inner": "%story%<hr>"
       },
       {
         "tag": "div",
-        "class": "value",
-        "inner": "Mehrwert: %value%"
-      },
-      {
-        "tag": "div",
-        "class": "punish",
-        "inner": "Strafe: %punish%"
-      },
-      {
-        "tag": "div",
-        "class": "risk",
-        "inner": "Risiko: %risk%"
-      },
-      {
-        "tag": "div",
-        "class": "effort",
-        "inner": "Aufwand: %effort%"
+        "class": "story_attributes",
+        "inner": "Mehrwert: %value% | Strafe: %punish% | Risiko: %risk% | Aufwand: %effort%"
       },
       {
         "tag": "div",
