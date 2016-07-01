@@ -7,14 +7,32 @@
   width: 392px;
 }
 
+.ccm-userstories > .main-content > .titel {
+  text-align: center;
+}
+
 .ccm-userstories > .main-content > .story_entries > .stories {
   display: table;
   padding: 0.5em;
   margin-top: 0.5em;
   background: gray;
   border: 1px solid black;
-  width: 360px;
+  width: 375px;
 }
+
+.ccm-userstories > .main-content > .story_entries > .stories > .prio {
+  color: red;
+}
+
+.ccm-userstories > .main-content > .story_entries > .stories > .name {
+    font-weight: bold;    
+}
+
+.ccm-userstories > .main-content > .story_entries > .stories > .text {
+    font-size: 17px;
+    font-style: italic;
+}
+
 .ccm-userstories > .main-content > .story_entries > .stories > div {
   display: table-row;
 }
@@ -67,6 +85,25 @@
   clear: both;
 }
 
+.ccm-userstories > .main-content > .del_story {
+  background: lightgrey;
+  margin-top: 0.5em;
+}
+
+.ccm-userstories > .main-content > .del_story > .del_navi {
+  margin: 0.5em;
+}
+
+.ccm-userstories > .main-content > .del_story > .del_navi > form > .del_input {
+  margin: 0.5em;
+  width: 80px;
+}
+
+.ccm-userstories > .main-content > .del_story > .del_navi > form > .del_button{
+  margin-left: 0.5em;
+  width: 86px;
+}
+
 .ccm-userstories > .main-content > .sort_story {
   background: lightgrey;
   margin-top: 0.5em;
@@ -81,12 +118,5 @@
   margin: 0.5em;
 }
 
-.ccm-userstories > .main-content > .sort_story > .sort_div > .search_navi {
-  margin: 0.5em;
-}
 
-.ccm-userstories > .main-content > .sort_story > .sort_div > .search_navi > .search_input {
-  margin-left: 1em;
-  width: 80px;
-}
 
